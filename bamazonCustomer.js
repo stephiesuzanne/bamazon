@@ -16,7 +16,7 @@ var display = function() {
   connection.query("SELECT * FROM products", function(err, res) {
     if (err) throw err;
     console.log("-----------------------------");
-    console.log("      Welcome To Bamazon    ");
+    console.log("      Welcome To Bamazon!   ");
     console.log("-----------------------------");
     console.log("");
     console.log("Find below our Products List");
@@ -26,7 +26,7 @@ var display = function() {
       colWidths: [12, 50, 8],
       colAligns: ["center", "left", "right"],
       style: {
-        head: ["aqua"],
+        head: ["brightpink"],
         compact: true
         // 'padding-right' : 1,
       }
@@ -47,7 +47,7 @@ var shopping = function() {
     .prompt({
       name: "productToBuy",
       type: "input",
-      message: "Please enter the Product Id of the item you wish to purchase.!"
+      message: "Please enter the Product Id of the item you wish to purchase."
     })
     .then(function(answer1) {
       var selection = answer1.productToBuy;
@@ -67,7 +67,7 @@ var shopping = function() {
             .prompt({
               name: "quantity",
               type: "input",
-              message: "How many items woul you like to purchase?"
+              message: "How many items would you like to purchase?"
             })
             .then(function(answer2) {
               var quantity = answer2.quantity;
@@ -93,7 +93,7 @@ var shopping = function() {
                     if (err) throw err;
                     console.log("");
                     console.log("Your Order has been Processed");
-                    console.log("Thank you for Shopping with us...!");
+                    console.log("Thank you for Shopping with us!");
                     console.log("");
                     connection.end();
                   }
