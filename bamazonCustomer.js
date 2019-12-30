@@ -73,9 +73,9 @@ var shopping = function() {
               var quantity = answer2.quantity;
               if (quantity > res[0].stock_quantity) {
                 console.log(
-                  "Our Apologies we only have " +
+                  "Our Apologies! We have an insufficient quantity. We currently have " +
                     res[0].stock_quantity +
-                    " items of the product selected"
+                    " item(s) of the product selected in stock."
                 );
                 shopping();
               } else {
